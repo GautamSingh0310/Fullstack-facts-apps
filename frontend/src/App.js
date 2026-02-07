@@ -4,7 +4,7 @@ function App() {
   const [facts, setFacts] = useState([]);
 
   useEffect(() => {
-    fetch("https://fullstack-facts-apps.onrender.com")
+    fetch("https://fullstack-facts-apps.onrender.com/api/facts/")
       .then((res) => res.json())
       .then((data) => setFacts(data))
       .catch((err) => console.error("Error fetching facts:", err));
